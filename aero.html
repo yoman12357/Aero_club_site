@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aero NITK | Wings of Teamwork</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-/vwK6C+JGKiOw9fRmfphbNdXlv9E8Z5FqvmE0lfcIpQ4Onp/0I1SDFmMjvWqacbN6p93OjX+aRrQ8zZ1+Qs2BQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="aero.css" />
+</head>
+
+<body>
+
+
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-section">
+                <img src="Aero_NITK_logo.png" alt="Logo" class="nav-logo">
+                <span class="club-name">AERO NITK</span>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="sign_in.html" target="_blank">Sign-In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <img src="Aero_NITK_logo.png" alt="Aero NITK Logo" class="hero-logo" />
+            <h1>Welcome to Aero NITK</h1>
+            <p>Wings of Teamwork</p>
+            <h1 id="typewriter-text"></h1>
+            <a href="#about"><button>Learn More</button></a>
+
+        </div>
+    </section>
+
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+
+        <div class="orbit-wrapper">
+            <div class="center-object">
+                <img src="Aero_NITK_logo.png" alt="Aero NITK" />
+            </div>
+            <div class="orbit" id="orbit2" >
+                <img src="satellite_image.png" alt="Satellite" />
+            </div>
+            
+        </div>
+
+        <p>
+            Founded by a group of aviation enthusiasts at NITK Surathkal, Aero NITK is the official aerospace and
+            aeromodelling club of the institute. We provide a platform for students to explore the world of flight —
+            from fundamental principles of aerodynamics to cutting-edge UAV and drone technologies.
+        </p>
+        <p>
+            Our club functions as a blend of engineering creativity and teamwork. We engage in designing, fabricating,
+            and flying various aerospace systems, ranging from gliders and quadcopters to autonomous drones. Students
+            gain hands-on experience in 3D designing, CAD modeling, circuit integration, and control systems.
+        </p>
+        <p>
+            Aero NITK regularly represents the institute at prestigious national-level competitions such as SAE Aero
+            Design, Techkriti, and Boeing Aeromodelling. We also conduct workshops, seminars, and flying events for the
+            student community to inspire interest in aerospace engineering.
+        </p>
+    </section>
+
+
+    <section class="projects" id="projects">
+        <h2>Our Projects</h2>
+        <div class="carousel-track">
+            <div class="slide">
+                <p>FPV Drone Racing</p>
+            </div>
+            <div class="slide">
+                <p>RC Fixed Wing Glider</p>
+            </div>
+            <div class="slide">
+                <p>Autonomous Quadcopter</p>
+            </div>
+            <div class="slide">
+                <p>Payload Drop Mechanism</p>
+            </div>
+            <div class="slide">
+                <p>VTOL (Vertical Takeoff) Drone</p>
+            </div>
+            <div class="slide">
+                <p>Canard Configuration Plane</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="team_member">
+        <a href="Team_Members.html" target="_blank"> <button class="team_member_name">Team Members</button></a>
+
+    </div>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/aeronitk/" target="_blank" aria-label="Instagram"> <img
+                    src="instagram_logo.png" style="height: 30px;"></a>
+            <a href="https://www.youtube.com/@AeroNITK" target="_blank" aria-label="YouTube"><img src="youtube_logo.png"
+                    style="height: 30px;"> </a>
+            <a href="https://www.linkedin.com/company/aero-nitk" target="_blank" aria-label="LinkedIn"><img
+                    src="linkedIn_logo.png" style="height: 30px;"> </a>
+        </div>
+
+        <p>© 2025 Aero NITK | Built with 💙 by Team Aero</p>
+    </footer>
+
+
+
+    <script src="aero.js"></script>
+
+</body>
+
+</html>

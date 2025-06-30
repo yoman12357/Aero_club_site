@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    color: white;
+    scroll-behavior: smooth;
+    
+}
+
+h2 {
+    text-decoration: underline;
+
+
+}
+
+h2:hover {
+    color: white;
+    cursor: default;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: color 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 0 10px black;
+  transform: scale(1.05);
+}
+
+
+    
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #0f1f3d;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo {
+    height: 50px;
+}
+
+.club-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00b4d8;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #00b4d8;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  text-align: center;
+}
+
+#typewriter-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  width: fit-content;
+  animation: blinkCursor 0.75s step-end infinite;
+}
+
+@keyframes blinkCursor {
+  50% {
+   border-color: black;
+   color: red;
+  }
+}
+
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;    
+        background: #101d3a;    
+        position: absolute;    
+        top: 70px;    
+        right: 20px;    
+        border-radius: 10px;    
+        padding: 15px;    
+    }    
+    
+    .nav-links.active {    
+        display: flex;    
+    }    
+    
+    .hamburger {    
+        display: block;    
+    }
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #0b162a, #123456);
+    text-align: center;
+    background-image: url(hero_background.jpg);
+    background-size: cover;
+
+}
+
+.hero-content {
+    animation: fadeIn 2s ease;
+
+}
+
+.hero-logo {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #00b4d8;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    background-color: #00b4d8;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition:0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #0077b6;
+}
+
+.about {
+    padding: 60px 40px;
+    background-color: #1c2c45;
+    text-align: center;
+}
+.orbit-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.center-object {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.center-object img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.orbit {
+  position: sticky;
+  
+  left: 60%;
+ 
+  
+  transform-origin: center center;
+  animation: rotate 1s infinite  ;
+}
+
+.orbit img {
+  width: 60px;
+  transform: translateX(120px);
+  transform: translateY(120px);
+}
+
+
+
+
+@keyframes rotate {
+    0% { transform: rotate(360deg) ;}
+
+}
+.about h2 {
+    font-size: 2.5rem;
+    color: #00b4d8;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.projects {
+    background-color: #0b162a;
+    padding: 60px 30px;
+    text-align: center;
+    background-image: url(project_background.jpg);
+    background-size: cover;
+  
+}
+
+.projects h2 {
+    color: rgb(216, 230, 97);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.carousel {
+    overflow: hidden;
+    max-width: 90%;
+    margin: auto;
+    
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 12s linear infinite;
+}
+
+.slide {
+    min-width: 300px;
+    margin: 0 15px;
+    text-align: center;
+}
+
+
+
+.slide p {
+    margin-top: 10px;
+    color: #d8e661;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.team_member{
+    background-color: rgb(41, 18, 156);
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.team_member_name{
+    background-color: #00b4d8;
+    color: white;
+    padding: 2px;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.contact {
+    background-color: #172a45;
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #00b4d8;
+    margin-bottom: 20px;
+}
+
+#contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#contact-form button {
+    background-color: #00b4d8;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+footer {
+  background-color: #0f1f3d;
+  padding: 25px 15px;
+  text-align: center;
+  font-size:20px;
+  color: #ccc;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  color: #d4f20e;
+  margin: 0 12px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
