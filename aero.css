@@ -181,50 +181,7 @@ button:hover {
     background-color: #1c2c45;
     text-align: center;
 }
-.orbit-wrapper {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: auto;
-  margin-top: 100px;
-}
 
-.center-object {
-  position: absolute;
-  left: 50%;
-  bottom: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-}
-
-.center-object img {
-  width: 100px;
-  border-radius: 50%;
-}
-
-.orbit {
-  position: sticky;
-  
-  left: 60%;
- 
-  
-  transform-origin: center center;
-  animation: rotate 1s infinite  ;
-}
-
-.orbit img {
-  width: 60px;
-  transform: translateX(120px);
-  transform: translateY(120px);
-}
-
-
-
-
-@keyframes rotate {
-    0% { transform: rotate(360deg) ;}
-
-}
 .about h2 {
     font-size: 2.5rem;
     color: #00b4d8;
@@ -249,7 +206,7 @@ button:hover {
 }
 
 .projects h2 {
-    color: rgb(216, 230, 97);
+    color: rgb(229, 255, 0);
     font-size: 2.5rem;
     margin-bottom: 30px;
 }
@@ -276,7 +233,7 @@ button:hover {
 
 .slide p {
     margin-top: 10px;
-    color: #d8e661;
+    color: #e5ff00;
 }
 
 @keyframes scroll {
@@ -288,27 +245,167 @@ button:hover {
         transform: translateX(-100%);
     }
 }
-.team_member{
-    background-color: rgb(41, 18, 156);
-    height: 50px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
-.team_member_name{
-    background-color: #00b4d8;
-    color: white;
-    padding: 2px;
-    border: 2px solid black;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    padding-left: 22px;
-    padding-right: 22px;
+
+#timeline {
+  background: #030b16;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
 }
 
+#timeline h2 {
+  font-size: 3rem;
+  color: #00ffff;
+  margin-bottom: 50px;
+}
+
+.timeline {
+  position: relative;
+  margin: auto;
+  max-width: 800px;
+  padding-left: 20px;
+  border-left: 3px solid #00ffff;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 60px 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -13px;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  background: #00ffff;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+  animation: pulse 2s infinite ease-in-out;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px #00ffff, 0 0 30px #00ffff33; }
+  50% { box-shadow: 0 0 25px #00ffff, 0 0 60px #00ffff66; }
+  100% { box-shadow: 0 0 10px #00ffff, 0 0 30px #00ffff33; }
+}
+
+.timeline-content {
+  margin-left: 40px;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px #00ffff33;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px #00ffff88;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+.timeline-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #e0f7fa;
+}
+#team {
+  background: #000;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#team h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.team-card {
+  width: 220px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.team-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #00ffff44;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front {
+  background: #111;
+}
+
+.card-front img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.card-front h3 {
+  margin: 10px 0;
+  color: #00ffff;
+}
+
+.card-back {
+  background: #00ffff11;
+  transform: rotateY(180deg);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+
 .contact {
-    background-color: #172a45;
+    background-image: url(Loop\ Space\ GIF.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
     padding: 60px 30px;
 }
@@ -381,4 +478,25 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+}
+.space {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  
+  background: black;
+}
+
+.satellite {
+  position: absolute;
+  width: 40px;
+  animation: floatRandom 0.00001ms ease-in-out infinite;
+}
+
+/* Floating effect keyframe */
+@keyframes floatRandom {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  50%  { transform: translate(155px, -150px) rotate(100deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
 }
