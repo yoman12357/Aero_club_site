@@ -68,13 +68,14 @@ button:hover {
 
 .nav-links li a {
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: 500;
     transition: 0.3s;
 }
 
 .nav-links li a:hover {
     color: #00b4d8;
+    text-decoration: none;
 }
 /* 🚁 Drone Image Styling */
 .drone-img {
@@ -190,9 +191,7 @@ button:hover {
         padding: 15px;
     }
 
-    .nav-links.active {
-        display: flex;
-    }
+    
 
     .hamburger {
         display: block;
